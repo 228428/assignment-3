@@ -12,7 +12,7 @@ const camera = new THREE.PerspectiveCamera(
   0.1,
   1000
 );
-camera.position.set(0, 5, 20);
+camera.position.set(0, 5, 15);
 
 // Renderer
 const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -30,17 +30,17 @@ const light = new THREE.PointLight(0xffffff, 1);
 light.position.set(10, 15, 10);
 scene.add(light);
 
-// Monastery made of floating cubes
+// Floating cube group
 const monastery = new THREE.Group();
+scene.add(monastery);
 
+// Add cubes (no randomness)
 for (let x = -2; x <= 2; x++) {
   for (let y = 0; y <= 4; y++) {
     for (let z = -2; z <= 2; z++) {
-      if (Math.random() > 0.6) continue;
-
       const cubeGeo = new THREE.BoxGeometry(1, 1, 1);
       const cubeMat = new THREE.MeshStandardMaterial({
-        color: `hsl(${200 + y * 10}, 60%, 65%)`,
+        color: `hsl(${180 + y * 15}, 70%, 65%)`,
         roughness: 0.4,
         metalness: 0.3,
       });
@@ -51,22 +51,18 @@ for (let x = -2; x <= 2; x++) {
   }
 }
 
-scene.add(monastery);
-
-// Animate
+// Animation loop
 function animate() {
   requestAnimationFrame(animate);
-
   monastery.rotation.y += 0.002;
   monastery.position.y = Math.sin(Date.now() * 0.001) * 0.5;
-
   controls.update();
   renderer.render(scene, camera);
 }
 
 animate();
 
-// Resize
+// Resize handler
 window.addEventListener("resize", () => {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
