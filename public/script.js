@@ -1,25 +1,74 @@
-document.body.style.margin   = 0
-document.body.style.overflow = `hidden`
+import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.155.0/build/three.module.js";
+import { OrbitControls } from "https://cdn.jsdelivr.net/npm/three@0.155.0/examples/jsm/controls/OrbitControls.js";
 
-const cnv = document.getElementById (`cnv_element`)
-cnv.width = innerWidth
-cnv.height = innerHeight
+// Scene
+const scene = new THREE.Scene();
+scene.background = new THREE.Color("#0f0e17");
 
-const ctx = cnv.getContext (`2d`)
+// Camera
+const camera = new THREE.PerspectiveCamera(
+  75,
+  window.innerWidth / window.innerHeight,
+  0.1,
+  1000
+);
+camera.position.set(0, 5, 20);
 
-const draw_frame = ms => {
-   const t = ms / 1000
-   console.log (`page loaded ${ t.toFixed (2)}s ago`)
+// Renderer
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
 
-   ctx.fillStyle = `turquoise`
-   ctx.fillRect (0, 0, innerWidth, innerHeight)
+// Controls
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.05;
+controls.enablePan = true;
 
-   requestAnimationFrame (draw_frame)
+// Light
+const light = new THREE.PointLight(0xffffff, 1);
+light.position.set(10, 15, 10);
+scene.add(light);
+
+// Monastery made of floating cubes
+const monastery = new THREE.Group();
+
+for (let x = -2; x <= 2; x++) {
+  for (let y = 0; y <= 4; y++) {
+    for (let z = -2; z <= 2; z++) {
+      if (Math.random() > 0.6) continue;
+
+      const cubeGeo = new THREE.BoxGeometry(1, 1, 1);
+      const cubeMat = new THREE.MeshStandardMaterial({
+        color: `hsl(${200 + y * 10}, 60%, 65%)`,
+        roughness: 0.4,
+        metalness: 0.3,
+      });
+      const cube = new THREE.Mesh(cubeGeo, cubeMat);
+      cube.position.set(x, y, z);
+      monastery.add(cube);
+    }
+  }
 }
 
-requestAnimationFrame (draw_frame)
+scene.add(monastery);
 
-onresize = () => {
-   cnv.width = innerWidth
-   cnv.height = innerHeight   
+// Animate
+function animate() {
+  requestAnimationFrame(animate);
+
+  monastery.rotation.y += 0.002;
+  monastery.position.y = Math.sin(Date.now() * 0.001) * 0.5;
+
+  controls.update();
+  renderer.render(scene, camera);
 }
+
+animate();
+
+// Resize
+window.addEventListener("resize", () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
