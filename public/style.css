@@ -137,3 +137,54 @@ footer {
     flex-direction: column;
   }
 }
+
+.back-link {
+  display: inline-block;
+  margin: 1rem;
+  font-size: 1.1rem;
+  color: #2c1b0f;
+  text-decoration: none;
+  border-bottom: 1px solid #2c1b0f;
+}
+.back-link:hover {
+  opacity: 0.7;
+}
+
+.project-section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.youtube-video {
+  width: 100vw;
+  height: 100vh;
+  border: none;
+}
+
+.text-block {
+  width: 100%;
+  max-width: 900px;
+  padding: 2rem;
+  background-color: #ffffffcc;
+  backdrop-filter: blur(10px);
+  margin-top: -10vh;
+  z-index: 2;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
