@@ -46,7 +46,7 @@
       <p>
         This project began as an exploration into transforming 2D images into
         spatial, living forms using TouchDesigner. I wanted to create something
-        that felt both structured and organic—almost like a floating pixel
+        that felt both structured and organic almost like a floating pixel
         sculpture. The final look was inspired by the textures of traditional
         Bhutanese architecture, but reimagined through a digital lens. To
         start,I used a Constant CHOP to set the resolution (I chose 500), then
@@ -55,10 +55,10 @@
         Transform SOP (with a uniform scale of 0.015), and brought it into a Geo
         COMP. I planned to animate this geo later on. Then, I added a Camera
         COMP, Light COMP, and a Render TOP, where I set the resolution to
-        1080x1080, the pixel format to 16-bit float (RGBA), and anti-aliasing to
-        16x—just enough for my laptops GPU. To clean up the look, I added an RGB
+        1080x1080, the pixel format to 16 bit float (RGBA), and anti aliasing to
+        16x just enough for my laptops GPU. To clean up the look, I added an RGB
         Key to isolate the background and turn it fully black. A Luma Blur was
-        used for subtle soft-focus effects, almost like tilt-shift photography.
+        used for subtle soft focus effects, almost like tilt shift photography.
         The magic started when I made two Ramp TOPs—one for red (vertical), and
         another for green (horizontal). I added Math TOPs to remap the values
         from -5 to 5, giving the particles more spatial spread. Then I used a
@@ -68,7 +68,7 @@
         adjusting the camera angle and light (switched to a Cone Light to hide
         grid edges), the grid began to look like it extended infinitely. For the
         color data, I brought in a Ramp-based image and used Math and Fit TOPs
-        to scale and convert it to 32-bit float. I assigned this to the instance
+        to scale and convert it to 32 bit float. I assigned this to the instance
         color parameters (RGB + Alpha), giving each shape color variation.
         Finally, I added subtle rotation using an expression: me.time.seconds *
         0.05 which added slow, hypnotic movement to the whole composition. While
@@ -76,7 +76,7 @@
         diffusion and emboss textures for future iterations. This version,
         though, was all about getting the basics right and letting each cube
         breathe with light and rhythm. The process was a combination of visual
-        intuition, technical layering, and a fair bit of trial and error—but
+        intuition, technical layering, and a fair bit of trial and error but
         that is what I love most about TouchDesigner. It lets me sketch with
         code and improvise with light.
       </p>
