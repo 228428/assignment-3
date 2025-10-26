@@ -2,23 +2,261 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ཀུན་ཞེས། | Kunzy</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>When the Yaks Are Gone</title>
+
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cardo&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Staatliches&family=Sue+Ellen+Francisco&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="/style.css" />
   </head>
-  <body class="bhutan-landing">
-    <div class="landing-wrapper">
-      <div class="overlay">
-        <h1>མིག་འདེབས་ཀྱི་དགའ་སྟོན།</h1>
-        <p>
-          This installation is a meditation on nostalgia and distant memory.
+  <body>
+    <!-- scroll progress -->
+    <div class="progress" id="progress" aria-hidden="true"></div>
+
+    <!-- HERO — Merak–Sakteng from afar -->
+    <header
+      id="hero"
+      class="hero parallax"
+      data-parallax-speed="0.25"
+      role="banner"
+      aria-label="Merak–Sakteng mountains"
+    >
+      <div class="hero-overlay"></div>
+
+      <!-- glass-backed title for readability -->
+      <div class="glass hero-content">
+        <h1 class="hero-title">When the Yaks Are Gone</h1>
+        <p class="hero-sub">
+          Join me to tell the stories of the most rural community in Bhutan.
         </p>
-        <a class="cloud-button" href="projects.html">Enter</a>
       </div>
-    </div>
+
+      <!-- subtle scroll cue -->
+      <div class="scroll-cue" aria-hidden="true">
+        <span>scroll</span>
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M12 5v14m0 0l-6-6m6 6l6-6"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
+        </svg>
+      </div>
+    </header>
+
+    <!-- WHO ARE THE BROKPAS -->
+    <section class="container section">
+      <div class="text reveal">
+        <h2 class="h">Who are the Brokpas?</h2>
+        <p class="body">
+          The Brokpas of Merak–Sakteng are Bhutan’s highland yak herders —
+          moving with seasons, weaving memory into garments, and carrying
+          stories in a language passed mouth-to-mouth.
+        </p>
+      </div>
+
+      <!-- image appears under text, slides in -->
+      <figure class="figure slide-up">
+        <img
+          src="/assets/women.jpg"
+          alt="Brokpa women walking a mountain path"
+        />
+        <figcaption class="cap">
+          Merak–Sakteng: footsteps that map a way of life.
+        </figcaption>
+      </figure>
+
+      <!-- big explanation gap placeholder -->
+      <div class="spacer body"><!-- space for your long explanation --></div>
+    </section>
+
+    <!-- THREADS OF IDENTITY -->
+    <section class="container section">
+      <h2 class="h reveal">Threads of Identity</h2>
+
+      <!-- image directly under title -->
+      <figure class="figure slide-left">
+        <img src="/assets/yak.png" alt="Yak in alpine pasture" />
+        <figcaption class="cap">
+          Yaks — livelihood, ritual, and belonging.
+        </figcaption>
+      </figure>
+
+      <!-- big space with lorem ipsum text block -->
+      <div class="longtext reveal">
+        <p class="body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id
+          justo sit amet augue malesuada pulvinar. Phasellus feugiat, dui
+          tristique mattis commodo, mauris enim finibus quam, id tempor augue
+          massa a risus. Maecenas a pharetra velit. Nulla semper, erat et
+          suscipit lobortis, turpis ligula porta sem, nec fermentum orci ligula
+          id arcu. Integer nec ultrices elit. Aenean ac convallis magna. Cras
+          tincidunt, justo ut pretium vehicula, lacus nibh commodo ligula, vitae
+          consequat lectus mauris a est. Suspendisse sed placerat orci.
+          Vestibulum eget sapien ac nisi condimentum luctus. Donec efficitur
+          mauris at libero tempor, vitae volutpat nunc bibendum. Suspendisse
+          potenti.
+        </p>
+      </div>
+    </section>
+
+    <!-- PATH 1 · PERSONAL: TIMELINE — sticky rail + scrolly panels -->
+    <section id="timeline" class="timeline scrolly container">
+      <!-- Sticky left rail -->
+      <aside class="tl-rail">
+        <h3 class="tl-title">Life Along the Yak Trail</h3>
+        <ol class="tl-steps">
+          <li class="dot active" data-target="t1">Early footsteps</li>
+          <li class="dot" data-target="t2">Learning the craft</li>
+          <li class="dot" data-target="t3">Seasons & routes</li>
+          <li class="dot" data-target="t4">Festivals & belonging</li>
+        </ol>
+      </aside>
+
+      <!-- Scrollable panels on the right -->
+      <div class="tl-panels">
+        <!-- t1 -->
+        <article class="tl-panel card" id="t1">
+          <div class="tl-media slide-right">
+            <img
+              src="/assets/child.png"
+              alt="A young herder walking beside a yak"
+            />
+          </div>
+          <div class="tl-copy reveal">
+            <h4 class="h-sm">Early footsteps</h4>
+            <p class="body">
+              Herding often begins young — steps learned by listening: hoofbeats
+              on frost, bell chimes across the slope, and the morning path
+              unrolling with light.
+            </p>
+          </div>
+        </article>
+
+        <!-- t2 -->
+        <article class="tl-panel card" id="t2">
+          <div class="tl-media slide-left">
+            <img
+              src="/assets/women.jpg"
+              alt="Women weaving and preparing gear for yaks"
+            />
+          </div>
+          <div class="tl-copy reveal">
+            <h4 class="h-sm">Learning the craft</h4>
+            <p class="body">
+              Weaving, ropework, cheese-making, weather-lore — skills that
+              stitch resilience. Tools are passed hand to hand; knowledge lives
+              in practice.
+            </p>
+          </div>
+        </article>
+
+        <!-- t3 -->
+        <article class="tl-panel card" id="t3">
+          <div class="tl-media slide-right">
+            <img src="/assets/yak.png" alt="Yak on alpine pasture" />
+          </div>
+          <div class="tl-copy reveal">
+            <h4 class="h-sm">Seasons & routes</h4>
+            <p class="body">
+              Transhumance follows grass and meltwater. Routes bend with snow
+              timing, and maps are kept in memory — a landscape studied in
+              motion.
+            </p>
+          </div>
+        </article>
+
+        <!-- t4 -->
+        <article class="tl-panel card" id="t4">
+          <div class="tl-media slide-left">
+            <img
+              src="/assets/festival.png"
+              alt="Festival gathering in the highlands"
+            />
+          </div>
+          <div class="tl-copy reveal">
+            <h4 class="h-sm">Festivals & belonging</h4>
+            <p class="body">
+              Youth leave to study; many return for festival days — songs, hats,
+              and dance re-tie scattered lives to place. What remains is kept in
+              practice.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PATH 2 · SOCIAL: HORIZONTAL SCROLLY (Youth Leaving & Preserving) -->
+    <section id="leaving" class="hscroll-wrap">
+      <div class="hscroll-sticky">
+        <div
+          class="hscroll-track"
+          id="hTrack"
+          aria-label="Youth leaving & preserving"
+        >
+          <!-- panel A -->
+          <article class="hpanel" aria-roledescription="slide">
+            <div
+              class="hmedia"
+              style="background-image: url('/assets/festival.png')"
+            ></div>
+            <div class="hcopy">
+              <h3 class="h">New Paths</h3>
+              <p class="body">
+                Many children head to towns for school. Learning widens,
+                distances lengthen. The past does not disappear — it waits in
+                songs and seasonal returns.
+              </p>
+            </div>
+          </article>
+          <!-- panel B -->
+          <article class="hpanel">
+            <div
+              class="hmedia"
+              style="background-image: url('/assets/women.jpg')"
+            ></div>
+            <div class="hcopy">
+              <h3 class="h">What to Keep</h3>
+              <p class="body">
+                Preservation is practice: weaving circles supported, routes
+                remembered, stories recorded with consent, language spoken daily
+                — not only archived.
+              </p>
+            </div>
+          </article>
+          <!-- panel C -->
+          <article class="hpanel">
+            <div
+              class="hmedia"
+              style="background-image: url('/assets/yak.png')"
+            ></div>
+            <div class="hcopy">
+              <h3 class="h">Routes of Return</h3>
+              <p class="body">
+                Festivals bring return migrations in miniature — a retying of
+                threads: food, dress, dance, and the quiet weight of a yak’s
+                shadow at dusk.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer class="container footer">
+      <p class="tiny">
+        Palette · Iconic Red #B0171F · Forest Weave Green #3A6B35 · Wool White
+        #F5F5DC · Yak Black #1C1C1C · Turquoise #40E0D0
+      </p>
+    </footer>
+
+    <script src="/script.js"></script>
   </body>
 </html>
