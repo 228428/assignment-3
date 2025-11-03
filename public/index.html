@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>When the Yaks Are Gone</title>
 
-    <!-- Typography -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,20 +13,16 @@
       rel="stylesheet"
     />
 
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="/style.css" />
   </head>
-  <body>
-    <!-- scroll progress -->
-    <div class="progress" id="progress" aria-hidden="true"></div>
 
-    <!-- HERO — Merak–Sakteng from afar -->
-    <header
-      id="hero"
-      class="hero parallax"
-      data-parallax-speed="0.25"
-      role="banner"
-      aria-label="Merak Sakteng mountains"
-    >
+  <body>
+    <!-- Scroll progress -->
+    <div class="progress" id="progress"></div>
+
+    <!-- HERO SECTION -->
+    <header id="hero" class="hero parallax" data-parallax-speed="0.25">
       <div class="hero-overlay"></div>
       <div class="glass hero-content">
         <h1 class="hero-title">When the Yaks Are Gone</h1>
@@ -34,7 +30,7 @@
           Join me to tell the stories of the most rural community in Bhutan.
         </p>
       </div>
-      <div class="scroll-cue" aria-hidden="true">
+      <div class="scroll-cue">
         <span>scroll</span>
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
           <path
@@ -50,17 +46,18 @@
     <!-- WHO ARE THE BROKPAS -->
     <section class="container section">
       <div class="text reveal">
-        <h2 class="h">Who are the Brokpas?</h2>
+        <h2 class="h">Who Are the Brokpas?</h2>
         <p class="body">
-          The Brokpas of eastern Bhutan live in the high valleys of Merak and
-          Sakteng in the Trashigang District. They have a distinct identity
-          within Bhutan and speak Brokpa kha which is used by only a small
-          number of people. Life is shaped by high altitude, strong weather and
-          distance from large towns. Their homes and paths follow seasonal
-          rhythms and the availability of pasture. Community work, ritual and
-          language connect people to the mountains. In Bhutan the Brokpas
-          represent a living link between culture and landscape and show how
-          knowledge is carried through daily practice.
+          The Brokpas are Bhutan’s semi-nomadic highland people who inhabit the
+          remote valleys of Merak and Sakteng in Trashigang District. Living
+          between 3,000 and 4,000 meters above sea level, they are known for
+          their yak herding traditions and unique language, Brokkat, which is
+          spoken only within their community. Their livelihood depends on yaks
+          for food, clothing, and trade. The Brokpas’ woven wool garments,
+          yak-hair hats, and seasonal movements reflect a deep connection to
+          nature and to Bhutan’s ancestral roots. Their culture symbolizes
+          Bhutan’s resilience — balancing modern progress while protecting
+          mountain traditions.
         </p>
       </div>
 
@@ -70,11 +67,9 @@
           alt="Brokpa women walking a mountain path"
         />
         <figcaption class="cap">
-          Merak and Sakteng. Footsteps that map a way of life.
+          Merak–Sakteng: footsteps that map a way of life.
         </figcaption>
       </figure>
-
-      <div class="spacer body"></div>
     </section>
 
     <!-- THREADS OF IDENTITY -->
@@ -84,97 +79,91 @@
       <figure class="figure slide-left">
         <img src="/assets/yak.png" alt="Yak in alpine pasture" />
         <figcaption class="cap">
-          Yaks are part of clothing, shelter and travel.
+          Yaks — livelihood, ritual, and belonging.
         </figcaption>
       </figure>
 
       <div class="longtext reveal">
         <p class="body">
-          Weaving is more than craft. It is how identity is made visible. Wool
-          from yaks is cleaned, spun and dyed, then woven into strong cloth that
-          keeps out wind and cold. Garments and blankets carry patterns that
-          have names and stories. The famous yak hair hat and heavy cloaks come
-          from careful work at the loom. During weaving sessions older makers
-          pass down technique, pattern meanings and values. Colour choice,
-          stripe spacing and texture are not only style. They signal where a
-          person is from, what season it is and what the community values. As
-          young people leave for school the act of weaving remains a steady way
-          to feel connected and to show where home is.
+          The Brokpa weaving tradition is a living archive of heritage. Each
+          pattern carries meaning — the diamond motifs represent protection, the
+          zigzags mirror mountain ridges, and the bold stripes signal lineage.
+          Yak wool is hand-spun into thread, dyed using natural pigments from
+          roots and minerals, and woven on backstrap looms. The process is
+          communal — women gather to weave and share stories passed through
+          generations. The weaves express identity and emotion: strength in red,
+          purity in white, endurance in black. Every cloth is both practical and
+          spiritual, protecting against the highland chill while symbolizing a
+          bond between people, animals, and land.
         </p>
       </div>
     </section>
 
-    <!-- PATH 1 · PERSONAL: TIMELINE — sticky rail + scrolly panels -->
+    <!-- LIFE ALONG THE YAK TRAIL -->
     <section id="timeline" class="timeline scrolly container">
       <aside class="tl-rail">
         <h3 class="tl-title">Life Along the Yak Trail</h3>
         <ol class="tl-steps">
-          <li class="dot active" data-target="t1">Early footsteps</li>
-          <li class="dot" data-target="t2">Learning the craft</li>
-          <li class="dot" data-target="t3">Seasons and routes</li>
-          <li class="dot" data-target="t4">Festivals and belonging</li>
+          <li class="dot active" data-target="t1">Early Footsteps</li>
+          <li class="dot" data-target="t2">Learning the Craft</li>
+          <li class="dot" data-target="t3">Seasons and Routes</li>
+          <li class="dot" data-target="t4">Festivals and Belonging</li>
         </ol>
       </aside>
 
       <div class="tl-panels">
-        <!-- t1 -->
         <article class="tl-panel card" id="t1">
           <div class="tl-media slide-right">
             <img
               src="/assets/child.png"
-              alt="A young herder walking beside a yak"
+              alt="Young herder walking beside a yak"
             />
           </div>
           <div class="tl-copy reveal">
-            <h4 class="h-sm">Early footsteps</h4>
+            <h4 class="h-sm">Early Footsteps</h4>
             <p class="body">
-              Herding often begins in childhood. Children learn to read the
-              ground, the sky and the sound of bells. Mornings begin before
-              sunrise and the day follows water, grass and safe crossings. Skill
-              is learned by watching elders and by listening to terrain.
+              Herding begins in childhood. Brokpa children learn to read the
+              weather, follow yak bells, and understand the rhythm of the land.
+              The first lesson is patience — moving at the pace of wind and
+              herd.
             </p>
           </div>
         </article>
 
-        <!-- t2 -->
         <article class="tl-panel card" id="t2">
           <div class="tl-media slide-left">
             <img
               src="/assets/women.jpg"
-              alt="Women weaving and preparing gear for yaks"
+              alt="Women weaving and preparing yak gear"
             />
           </div>
           <div class="tl-copy reveal">
-            <h4 class="h-sm">Learning the craft</h4>
+            <h4 class="h-sm">Learning the Craft</h4>
             <p class="body">
-              Work includes weaving, rope making, cheese making and repair of
-              pack gear. People also learn simple veterinary care, weather
-              reading and safe fire use. Knowledge is shared in daily tasks and
-              is tied to the seasons. Tools and stories move from hand to hand
-              and keep the group strong.
+              Young Brokpas learn to spin yak wool, weave fabric, and make
+              butter and cheese. These tasks sustain families through harsh
+              winters. Skills are shared across generations through observation,
+              rhythm, and repetition.
             </p>
           </div>
         </article>
 
-        <!-- t3 -->
         <article class="tl-panel card" id="t3">
           <div class="tl-media slide-right">
             <img src="/assets/yak.png" alt="Yak on alpine pasture" />
           </div>
           <div class="tl-copy reveal">
-            <h4 class="h-sm">Seasons and routes</h4>
+            <h4 class="h-sm">Seasons and Routes</h4>
             <p class="body">
-              Transhumance means moving with the seasons. In warm months herds
-              go to high grass. In cold months families return to lower homes.
-              Routes adjust to snow, rain and new growth. Paths are remembered
-              by sound, smell and sight and are often not written on maps. Yaks
-              provide milk, butter, cheese, wool and power for carrying loads.
-              They are also part of ritual life and social ties.
+              The Brokpas migrate with their yaks according to the seasons. In
+              summer, herds graze in the high pastures. In winter, they descend
+              to lower valleys. These migrations keep the ecosystem balanced and
+              ensure sustainability for both people and animals. Yaks provide
+              milk, transport, wool, and are essential to Brokpa survival.
             </p>
           </div>
         </article>
 
-        <!-- t4 -->
         <article class="tl-panel card" id="t4">
           <div class="tl-media slide-left">
             <img
@@ -183,29 +172,24 @@
             />
           </div>
           <div class="tl-copy reveal">
-            <h4 class="h-sm">Festivals and belonging</h4>
+            <h4 class="h-sm">Festivals and Belonging</h4>
             <p class="body">
-              Many young people leave to study in towns. Families travel to
-              festivals to meet again and to renew dress, songs and stories.
-              Festivals make scattered lives feel close. Preservation grows
-              through practice, not only through storage in a museum. The work
-              is to keep language spoken, skills used and routes known.
+              During festivals, families reunite to dance, sing, and share food
+              made from yak butter and cheese. The celebrations reinforce
+              belonging, marking the cycles of time and gratitude for the
+              mountains. The Brokpas celebrate their identity not in words, but
+              in rhythm and color.
             </p>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- PATH 2 · SOCIAL: HORIZONTAL SCROLLY (Youth Leaving & Preserving) -->
+    <!-- NEW PATHS: HORIZONTAL SCROLL SECTION -->
     <section id="leaving" class="hscroll-wrap">
       <div class="hscroll-sticky">
-        <div
-          class="hscroll-track"
-          id="hTrack"
-          aria-label="Youth leaving and preserving"
-        >
-          <!-- panel A -->
-          <article class="hpanel" aria-roledescription="slide">
+        <div class="hscroll-track" id="hTrack">
+          <article class="hpanel">
             <div
               class="hmedia"
               style="background-image: url('/assets/festival.png')"
@@ -213,102 +197,57 @@
             <div class="hcopy">
               <h3 class="h">New Paths</h3>
               <p class="body">
-                Children go to school in towns and later take jobs in places far
-                from pasture. Education brings safety, health and choice. It
-                also means fewer herders and fewer hands to pass on mountain
-                knowledge. The community works to balance new goals with care
-                for memory and skill.
-              </p>
-            </div>
-          </article>
-          <!-- panel B -->
-          <article class="hpanel">
-            <div
-              class="hmedia"
-              style="background-image: url('/assets/women.jpg')"
-            ></div>
-            <div class="hcopy">
-              <h3 class="h">What to Keep</h3>
-              <p class="body">
-                Preservation is active. People record oral histories with
-                consent, support weaving circles, teach Brokpa kha to children
-                and map grazing routes. Festivals and home visits give time for
-                teaching and for the feeling of belonging. Digital tools can
-                help but practice is the heart of keeping culture alive.
-              </p>
-            </div>
-          </article>
-          <!-- panel C -->
-          <article class="hpanel">
-            <div
-              class="hmedia"
-              style="background-image: url('/assets/yak.png')"
-            ></div>
-            <div class="hcopy">
-              <h3 class="h">Routes of Return</h3>
-              <p class="body">
-                People return for ceremonies and family work. Songs, dress and
-                food reconnect people to place. Yaks remain a symbol of care for
-                land and for each other. The future may look different but
-                heritage can still live inside daily choices.
+                As education reaches the highlands, younger generations pursue
+                studies in the cities. They seek stability and modern
+                livelihoods, yet carry their homeland in stories and dress. The
+                challenge is to sustain traditions in a rapidly changing world.
               </p>
             </div>
           </article>
 
-          <!-- Optional extra panels for the new images you are making -->
           <article class="hpanel">
             <div
               class="hmedia"
-              style="background-image: url('/assets/hands_weave.jpg')"
+              style="background-image: url('/assets/hands_weave.png')"
             ></div>
             <div class="hcopy">
               <h3 class="h">Hands at the Loom</h3>
               <p class="body">
-                Close views of hands show how skill travels. Each shuttle pass
-                is a lesson. Patterns are remembered by name, rhythm and feel. A
-                good photo here is a macro of hands, wool and shuttle.
+                Every Brokpa cloth is a conversation between generations. The
+                loom hums with memory — a form of storytelling beyond words.
+                These weaves preserve not only warmth, but identity.
               </p>
             </div>
           </article>
+
           <article class="hpanel">
             <div
               class="hmedia"
-              style="background-image: url('/assets/hat_detail.jpg')"
-            ></div>
-            <div class="hcopy">
-              <h3 class="h">Meaning in Detail</h3>
-              <p class="body">
-                Show the yak hair hat or a woven border with strong texture.
-                Explain how form follows weather and work, and how design
-                choices become markers of place and kinship.
-              </p>
-            </div>
-          </article>
-          <article class="hpanel">
-            <div
-              class="hmedia"
-              style="background-image: url('/assets/map_route.jpg')"
+              style="background-image: url('/assets/map_route.png')"
             ></div>
             <div class="hcopy">
               <h3 class="h">Memory Maps</h3>
               <p class="body">
-                A route sketch or a photo of a hand drawn map shows how paths
-                live in memory. Invite viewers to imagine the sound of bells and
-                wind along the line.
+                Hand-drawn routes show how families once moved with their herds.
+                They serve as memory maps, marking sacred mountains, river
+                crossings, and pasture zones. These maps are now being digitized
+                to protect intangible heritage.
               </p>
             </div>
           </article>
+
           <article class="hpanel">
             <div
               class="hmedia"
-              style="background-image: url('/assets/snow_path.jpg')"
+              style="background-image: url('/assets/snow_path.png')"
             ></div>
             <div class="hcopy">
-              <h3 class="h">Season Shift</h3>
+              <h3 class="h">Seasons of Change</h3>
               <p class="body">
-                A frame with late snow or first grass helps viewers feel the
-                calendar of the mountains. This panel works well with a quiet
-                image and a slow read.
+                Snow patterns shift and grass grows differently than before.
+                Climate change challenges the herding lifestyle. The Brokpas
+                adapt with resilience, finding new balance between tradition and
+                modernity.
               </p>
             </div>
           </article>
